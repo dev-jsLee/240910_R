@@ -34,7 +34,11 @@ print(scores[,"math"])
 
 # 때문에, 변수 없이 직접 값을 넣으면
 # 헤더는 설정되지 않는다.
-scores_2 <- cbind(c(1, 2, 3), c(4, 5, 6), c(7, 8, 9))
+scores_2 <- cbind(
+  c(1, 2, 3), 
+  c(4, 5, 6), 
+  c(7, 8, 9)
+  )
 print(scores_2)
 
 
