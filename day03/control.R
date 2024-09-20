@@ -38,8 +38,23 @@ if(num > 10) {
   print("< 10")
 }
 
+# 조건문
+# score라는 변수에 점수를 담아서 (100 >= score >= 0)
+score <- 91
 
-
+# 90점 이상은 A
+if(score >= 90){
+  print("A")
+# 80점 이상은 B
+} else if(score >= 80) {
+  print("B")
+# 70점 이상은 C
+} else if(score >= 70) {
+  print("C")
+# 70점 미만은 F가 출력되게
+} else {
+  print("F")
+}
 
 
 
