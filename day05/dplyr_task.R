@@ -1,3 +1,6 @@
+# dplyr 패키지 부착
+library(dplyr)
+
 df <- data.frame(
   Name = c("Kim", "Lee", "Hong", "Lee", "Kim"),
   Age = c(25, 23, 39, 44, 34),
