@@ -1,0 +1,16 @@
+저장소 상태 확인
+git status
+
+저장소 새로 만들기
+git init
+
+변경사항 대상 선정
+git add test.txt a.r
+변경사항 모두 대상으로 선정
+git add .
+
+변경사항 버전으로 확정
+git commit -m "변경사항 메모"
+
+git pull
+git push

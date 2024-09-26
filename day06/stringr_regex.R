@@ -49,6 +49,49 @@ split_v <- str_split("hello world! nice day!", " ")
 # 반환되는 값의 타입은 리스트 타입으로 반환된다.
 print(class(split_v))
 
+# 좌우 공백 문자 제거
+# str_trim(string)
+# 전달된 문자열의 좌우 공백문자를 모두 제거하는 함수
+# 공백문자에는 탭(\t), 줄바꿈(\n) 등도 포함된다.
+trimed <- str_trim("\t\n  hello world   ")
+print(trimed) # "hello world"
 
+# 대소문자 변환
+# str_to_upper(), str_to_lower(), str_to_title()
+# 각각 모두 대문자, 모두 소문자, 단어의 첫글자만 대문자로 바꿔준다.
+text <- "heLLo, tworLD"
+print(str_to_upper(text)) # "HELLO, WORLD"
+print(str_to_lower(text)) # "hello, world"
+print(str_to_title(text)) # "Hello, World"
 
+# 패턴 매칭과 캡처
+# str_match(), str_match_all()
+# 원본 문자열에서 찾고자하는 문자열을 전달하면
+# 해당되는 문자열들을 모두 가져온다.
+text <- "제품 코드: A-123, B-234, C-345"
 
+matches <- str_match_all(text, "([A-Z])-([0-9]+)")
+# (대문자 알파벳 하나)-(숫자가 하나 이상)
+print(class(matches))
+print(matches)
+print(matches[[1]])
+# 2열부터는 캡처그룹이라고 부르며
+# 정규표현식 상에서 그룹()으로 묶인 대상들을 순서대로
+# 나열한 것이다.
+#      [,1]    [,2] [,3]
+# [1,] "A-123" "A"  "123"
+# [2,] "B-234" "B"  "234"
+# [3,] "C-345" "C"  "345"
+
+# 조건에 맞는 문자열 추출
+# str_subset()
+# 조건에 맞는 부분 문자열들을 가져오는 함수다.
+# 문자열값 하나하나를 검사한다.
+# 부분 문자열을 들고오는 방식이 아니다.
+fruits <- c("apple", "banana", "grape", "mango", "pineapple")
+apples <- str_subset(fruits, "apple")
+print(apples)
+
+text <- "apple, pineapple, banana"
+new_text <- str_subset(text, "apple")
+print(new_text)
